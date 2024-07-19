@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <div id="finding">
+        <p><i>FINDING HTML ELEMENTS BY ID</i></p>
+    </div>
+    <div class="finding1">
+        <p><i>FINDING HTML ELEMENTS BY TAG NAME</i></p>
+    </div>
+    <div class="finding2">
+        <p>FINDING HTML ELEMENTS BY CLASS NAME</p>
+      </div>
+</body>
+<script>
+    
+    let finding = document.getElementById("finding");
+    console.log(finding);
+
+    let tag = document.querySelectorAll("div#finding1 p");
+    tag.forEach(paragraph => {
+    console.log(paragraph);
+});
+
+    const infoDivs = document.querySelectorAll(".finding2");
+    infoDivs.forEach(div => {
+    console.log(div);
+    });
+
+    const info = document.querySelector(".finding2:nth-child(2)");
+    console.log(info);
+
+
+</script>
+</html>
